@@ -50,13 +50,24 @@ button {
 
 .page {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero {
+  width: 100%;
   min-height: 100svh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 32px 20px 48px;
-  max-width: 1200px;
-  margin: 0 auto;
+  justify-content: center;
+  gap: 0;
+  padding: 72px 0 24px;
+  box-sizing: border-box;
 }
 
 .lang-switch {
@@ -406,6 +417,41 @@ button {
   text-align: center;
 }
 
+.scroll-hint {
+  margin-top: 32px;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.scroll-hint:hover {
+  opacity: 1;
+  color: var(--accent);
+}
+
+.scroll-hint__arrow {
+  font-size: 16px;
+  animation: scroll-hint-bounce 1.8s ease-in-out infinite;
+}
+
+@keyframes scroll-hint-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
 .about,
 .faq {
   width: 100%;
@@ -479,7 +525,11 @@ button {
 
 @media (max-width: 640px) {
   .page {
-    padding: 24px 14px 36px;
+    padding: 0 14px 36px;
+  }
+
+  .hero {
+    padding: 56px 0 20px;
   }
 
   .page__header h1 {

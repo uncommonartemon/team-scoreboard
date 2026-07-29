@@ -1,8 +1,14 @@
 <script setup>
-import { reactive, watch } from 'vue'
+import { reactive, watch, useTemplateRef } from 'vue'
 import gsap from 'gsap'
 import TeamCard from './components/TeamCard.vue'
 import { locale, toggleLocale, t } from './i18n'
+
+const aboutEl = useTemplateRef('aboutEl')
+
+function scrollToAbout() {
+  aboutEl.value?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+}
 
 const STORAGE_KEY = 'team-scoreboard:v1'
 const PALETTE = ['#ef4444', '#3b82f6', '#22c55e', '#f59e0b', '#a855f7', '#06b6d4', '#ec4899', '#84cc16']
@@ -43,13 +49,22 @@ watch(
   { deep: true },
 )
 
+function nextColor() {
+  const used = new Set(teams.map((team) => team.color))
+  const free = PALETTE.find((color) => !used.has(color))
+  if (free) return free
+
+  const counts = new Map(PALETTE.map((color) => [color, 0]))
+  teams.forEach((team) => counts.set(team.color, (counts.get(team.color) ?? 0) + 1))
+  return [...counts.entries()].sort((a, b) => a[1] - b[1])[0][0]
+}
+
 function addTeam() {
-  const color = PALETTE[teams.length % PALETTE.length]
   teams.push({
     id: crypto.randomUUID(),
     name: t('defaultTeamName', teams.length + 1),
     score: 0,
-    color,
+    color: nextColor(),
     buttons: makeButtons(),
   })
 }
@@ -90,39 +105,46 @@ function onCardLeave(el, done) {
       {{ locale === 'uk' ? 'EN' : 'UK' }}
     </button>
 
-    <header class="page__header">
-      <h1>🏆 Team Scoreboard</h1>
-      <p class="page__subtitle">{{ t('subtitle') }}</p>
-    </header>
+    <section class="hero">
+      <header class="page__header">
+        <h1>🏆 Team Scoreboard</h1>
+        <p class="page__subtitle">{{ t('subtitle') }}</p>
+      </header>
 
-    <main class="board">
-      <TransitionGroup
-        tag="div"
-        class="board__grid"
-        name="card"
-        :css="false"
-        @enter="onCardEnter"
-        @leave="onCardLeave"
-      >
-        <TeamCard
-          v-for="team in teams"
-          :key="team.id"
-          :team="team"
-          :can-remove="teams.length > 1"
-          @remove="removeTeam(team.id)"
-        />
-      </TransitionGroup>
-    </main>
+      <main class="board">
+        <TransitionGroup
+          tag="div"
+          class="board__grid"
+          name="card"
+          :css="false"
+          @enter="onCardEnter"
+          @leave="onCardLeave"
+        >
+          <TeamCard
+            v-for="team in teams"
+            :key="team.id"
+            :team="team"
+            :can-remove="teams.length > 1"
+            @remove="removeTeam(team.id)"
+          />
+        </TransitionGroup>
+      </main>
 
-    <footer class="controls">
-      <button type="button" class="btn btn--primary" @click="addTeam">{{ t('addTeam') }}</button>
-      <button type="button" class="btn" @click="resetScores">{{ t('resetScores') }}</button>
-      <button type="button" class="btn btn--danger" @click="newGame">{{ t('newGame') }}</button>
-    </footer>
+      <footer class="controls">
+        <button type="button" class="btn btn--primary" @click="addTeam">{{ t('addTeam') }}</button>
+        <button type="button" class="btn" @click="resetScores">{{ t('resetScores') }}</button>
+        <button type="button" class="btn btn--danger" @click="newGame">{{ t('newGame') }}</button>
+      </footer>
 
-    <p class="page__hint">{{ t('hint') }}</p>
+      <p class="page__hint">{{ t('hint') }}</p>
 
-    <section class="about">
+      <button type="button" class="scroll-hint" @click="scrollToAbout">
+        {{ t('scrollHint') }}
+        <span class="scroll-hint__arrow">↓</span>
+      </button>
+    </section>
+
+    <section ref="aboutEl" class="about">
       <h2>{{ t('aboutTitle') }}</h2>
       <p>{{ t('aboutIntro') }}</p>
       <ul class="about__use-cases">

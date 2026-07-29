@@ -1,22 +1,23 @@
 # 🏆 Team Scoreboard
 
-Простой онлайн-счётчик очков для командных игр с друзьями. Работает прямо в браузере, без бэкенда и регистрации.
+Free online score calculator for team games / безкоштовний онлайн-калькулятор рахунку для командних ігор з друзями. Frontend-only, no backend, no sign-up. UI: **Ukrainian / English** (toggle in the top-right corner).
 
-**Демо:** https://uncommonartemon.github.io/team-scoreboard/
+**Demo:** https://uncommonartemon.github.io/team-scoreboard/
 
-## Что умеет
+## Features
 
-- Любое число команд — добавляйте и удаляйте на лету
-- Редактируемое название команды (клик по имени)
-- Кнопки начисления/списания очков (по умолчанию +100 / −100)
-  - можно менять значение любой кнопки
-  - можно добавлять свои кнопки (например +10, −25)
-  - можно удалять ненужные кнопки
-- Сброс очков отдельной команды или всех сразу
-- «Новая игра» — полный сброс к настройкам по умолчанию
-- Автосохранение состояния в `localStorage` браузера
-- Плавные анимации (GSAP): появление карточек, всплывающие +/- очки, пульсация счёта
-- Адаптивная вёрстка под телефон, планшет и десктоп
+- Any number of teams — add and remove on the fly
+- Editable team name (click the name)
+- Score buttons (default +100 / −100)
+  - change any button's value
+  - add custom buttons (e.g. +10, −25)
+  - delete buttons you don't need
+- Reset a single team's score or all scores at once
+- "New game" — full reset to defaults
+- State auto-saved to browser `localStorage`
+- Smooth animations (GSAP): cards entering/leaving, floating +/- score popups, score pulse
+- Responsive layout for phone, tablet and desktop
+- Ukrainian / English interface with a one-click switch
 
 ## Технологии
 

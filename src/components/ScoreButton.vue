@@ -1,6 +1,7 @@
 <script setup>
 import { ref, nextTick, computed } from 'vue'
 import gsap from 'gsap'
+import { t } from '../i18n'
 
 const props = defineProps({
   value: { type: Number, required: true },
@@ -66,8 +67,8 @@ function cancel() {
     </button>
 
     <span v-if="!editing" class="score-btn-controls">
-      <button type="button" class="mini-btn" title="Изменить значение" @click.stop="startEdit">✎</button>
-      <button type="button" class="mini-btn" title="Удалить кнопку" @click.stop="$emit('remove')">✕</button>
+      <button type="button" class="mini-btn" :title="t('editValueTitle')" @click.stop="startEdit">✎</button>
+      <button type="button" class="mini-btn" :title="t('deleteButtonTitle')" @click.stop="$emit('remove')">✕</button>
     </span>
   </div>
 </template>

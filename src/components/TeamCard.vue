@@ -2,6 +2,7 @@
 import { ref, nextTick } from 'vue'
 import gsap from 'gsap'
 import ScoreButton from './ScoreButton.vue'
+import { t } from '../i18n'
 
 const props = defineProps({
   team: { type: Object, required: true },
@@ -23,7 +24,7 @@ function startEditName() {
 
 function finishEditName() {
   editingName.value = false
-  if (!props.team.name.trim()) props.team.name = 'Команда'
+  if (!props.team.name.trim()) props.team.name = t('teamFallbackName')
 }
 
 function applyDelta(delta) {
@@ -121,7 +122,7 @@ function updateButtonValue(id, value) {
         v-if="canRemove"
         type="button"
         class="icon-btn team-card__remove"
-        title="Удалить команду"
+        :title="t('removeTeamTitle')"
         @click="$emit('remove')"
       >
         ✕
@@ -151,11 +152,11 @@ function updateButtonValue(id, value) {
         @update="(v) => updateButtonValue(btn.id, v)"
         @remove="removeButton(btn.id)"
       />
-      <button type="button" class="add-score-btn" title="Добавить кнопку" @click="addButton">
-        + кнопка
+      <button type="button" class="add-score-btn" :title="t('addButtonTitle')" @click="addButton">
+        {{ t('addButton') }}
       </button>
     </div>
 
-    <button type="button" class="team-card__reset" @click="resetScore">Сбросить очки</button>
+    <button type="button" class="team-card__reset" @click="resetScore">{{ t('resetTeamScore') }}</button>
   </div>
 </template>

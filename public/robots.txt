@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://uncommonartemon.github.io/team-scoreboard/sitemap.xml

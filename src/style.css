@@ -77,21 +77,22 @@ button {
   border: 1px solid var(--border);
   background: var(--card-bg);
   color: var(--text-h);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 13px;
+  font-family: inherit;
   border-radius: 10px;
-  padding: 8px 12px;
+  padding: 8px 30px 8px 12px;
   cursor: pointer;
   box-shadow: var(--shadow);
-  transition: filter 0.15s, transform 0.15s;
+  transition: filter 0.15s;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6' fill='none'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%236b6375' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
 }
 
 .lang-switch:hover {
   filter: brightness(1.05);
-}
-
-.lang-switch:active {
-  transform: scale(0.95);
 }
 
 @media (max-width: 640px) {

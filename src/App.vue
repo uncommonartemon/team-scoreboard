@@ -2,7 +2,7 @@
 import { reactive, watch, useTemplateRef } from 'vue'
 import gsap from 'gsap'
 import TeamCard from './components/TeamCard.vue'
-import { locale, toggleLocale, t } from './i18n'
+import { locale, LOCALES, setLocale, t } from './i18n'
 
 const aboutEl = useTemplateRef('aboutEl')
 
@@ -101,9 +101,14 @@ function onCardLeave(el, done) {
 
 <template>
   <div class="page">
-    <button type="button" class="lang-switch" @click="toggleLocale">
-      {{ locale === 'uk' ? 'EN' : 'UK' }}
-    </button>
+    <select
+      class="lang-switch"
+      :value="locale"
+      aria-label="Language"
+      @change="setLocale($event.target.value)"
+    >
+      <option v-for="l in LOCALES" :key="l.code" :value="l.code">{{ l.label }}</option>
+    </select>
 
     <section class="hero">
       <header class="page__header">

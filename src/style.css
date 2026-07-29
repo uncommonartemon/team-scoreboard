@@ -406,6 +406,77 @@ button {
   text-align: center;
 }
 
+.about,
+.faq {
+  width: 100%;
+  max-width: 720px;
+  margin-top: 56px;
+  text-align: left;
+}
+
+.about h2,
+.faq h2 {
+  font-size: 22px;
+  color: var(--text-h);
+  margin: 0 0 12px;
+  text-align: center;
+}
+
+.about p {
+  margin: 0 0 16px;
+  line-height: 1.6;
+}
+
+.about__use-cases {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 8px 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about__use-cases li {
+  position: relative;
+  padding-left: 22px;
+  line-height: 1.5;
+}
+
+.about__use-cases li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.faq__item {
+  border-top: 1px solid var(--border);
+  padding: 16px 0;
+}
+
+.faq__item:last-child {
+  padding-bottom: 0;
+}
+
+.faq__item h3 {
+  font-size: 16px;
+  color: var(--text-h);
+  margin: 0 0 6px;
+}
+
+.faq__item p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .about,
+  .faq {
+    margin-top: 40px;
+  }
+}
+
 @media (max-width: 640px) {
   .page {
     padding: 24px 14px 36px;

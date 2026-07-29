@@ -6,9 +6,10 @@ import { t } from '../i18n'
 
 const props = defineProps({
   team: { type: Object, required: true },
+  buttons: { type: Array, required: true },
   canRemove: { type: Boolean, default: true },
 })
-const emit = defineEmits(['remove'])
+const emit = defineEmits(['remove', 'add-button', 'remove-button', 'update-button'])
 
 const editingName = ref(false)
 const nameInput = ref(null)
@@ -82,18 +83,6 @@ function resetScore() {
   pulseScore(false)
 }
 
-function addButton() {
-  props.team.buttons.push({ id: crypto.randomUUID(), value: 50 })
-}
-
-function removeButton(id) {
-  props.team.buttons = props.team.buttons.filter((b) => b.id !== id)
-}
-
-function updateButtonValue(id, value) {
-  const btn = props.team.buttons.find((b) => b.id === id)
-  if (btn) btn.value = value
-}
 </script>
 
 <template>
@@ -145,14 +134,14 @@ function updateButtonValue(id, value) {
 
     <div class="team-card__buttons">
       <ScoreButton
-        v-for="btn in team.buttons"
+        v-for="btn in buttons"
         :key="btn.id"
         :value="btn.value"
         @press="applyDelta(btn.value)"
-        @update="(v) => updateButtonValue(btn.id, v)"
-        @remove="removeButton(btn.id)"
+        @update="(v) => $emit('update-button', btn.id, v)"
+        @remove="$emit('remove-button', btn.id)"
       />
-      <button type="button" class="add-score-btn" :title="t('addButtonTitle')" @click="addButton">
+      <button type="button" class="add-score-btn" :title="t('addButtonTitle')" @click="$emit('add-button')">
         {{ t('addButton') }}
       </button>
     </div>

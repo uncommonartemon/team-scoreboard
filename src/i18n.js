@@ -7,6 +7,7 @@ const messages = {
     subtitle:
       'Лічильник очок для ігор з друзями — додавайте команди, нараховуйте та знімайте бали своїми кнопками.',
     addTeam: '+ Додати команду',
+    syncButtonsLabel: 'Однакові кнопки для всіх команд',
     resetScores: 'Скинути бали',
     newGame: 'Нова гра',
     hint: 'Дані зберігаються автоматично у цьому браузері.',
@@ -56,6 +57,7 @@ const messages = {
     subtitle:
       'A score counter for game nights with friends — add teams, add or subtract points with your own buttons.',
     addTeam: '+ Add team',
+    syncButtonsLabel: 'Same buttons for all teams',
     resetScores: 'Reset scores',
     newGame: 'New game',
     hint: 'Data is saved automatically in this browser.',
@@ -105,6 +107,7 @@ const messages = {
     subtitle:
       'Счётчик очков для игр с друзьями — добавляйте команды, начисляйте и вычитайте баллы своими кнопками.',
     addTeam: '+ Добавить команду',
+    syncButtonsLabel: 'Одинаковые кнопки для всех команд',
     resetScores: 'Сбросить баллы',
     newGame: 'Новая игра',
     hint: 'Данные сохраняются автоматически в этом браузере.',
@@ -154,6 +157,7 @@ const messages = {
     subtitle:
       'Un contador de puntos para noches de juego con amigos: añade equipos y suma o resta puntos con tus propios botones.',
     addTeam: '+ Añadir equipo',
+    syncButtonsLabel: 'Mismos botones para todos los equipos',
     resetScores: 'Reiniciar puntos',
     newGame: 'Nueva partida',
     hint: 'Los datos se guardan automáticamente en este navegador.',
@@ -203,6 +207,7 @@ const messages = {
     subtitle:
       "Un compteur de points pour les soirées jeux entre amis — ajoutez des équipes et ajoutez ou retirez des points avec vos propres boutons.",
     addTeam: '+ Ajouter une équipe',
+    syncButtonsLabel: 'Mêmes boutons pour toutes les équipes',
     resetScores: 'Réinitialiser les points',
     newGame: 'Nouvelle partie',
     hint: 'Les données sont enregistrées automatiquement dans ce navigateur.',
@@ -252,6 +257,7 @@ const messages = {
     subtitle:
       'Ein Punktezähler für Spieleabende mit Freunden — Teams hinzufügen und mit eigenen Buttons Punkte addieren oder abziehen.',
     addTeam: '+ Team hinzufügen',
+    syncButtonsLabel: 'Gleiche Buttons für alle Teams',
     resetScores: 'Punkte zurücksetzen',
     newGame: 'Neues Spiel',
     hint: 'Die Daten werden automatisch in diesem Browser gespeichert.',
@@ -300,6 +306,7 @@ const messages = {
   zh: {
     subtitle: '与朋友一起游戏之夜的计分器——添加队伍，用自己设置的按钮加减分数。',
     addTeam: '+ 添加队伍',
+    syncButtonsLabel: '所有队伍使用相同按钮',
     resetScores: '重置分数',
     newGame: '新游戏',
     hint: '数据会自动保存在此浏览器中。',

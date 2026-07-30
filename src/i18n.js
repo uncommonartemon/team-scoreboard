@@ -22,35 +22,16 @@ const messages = {
     confirmNewGame: 'Скинути все і почати заново з налаштуваннями за замовчуванням?',
     defaultTeamName: (n) => `Команда ${n}`,
     teamFallbackName: 'Команда',
-    aboutTitle: 'Для чого потрібен цей рахунок',
+    aboutTitle: 'Про застосунок',
     aboutIntro:
-      'Team Scoreboard — простий інструмент для ведення рахунку в командних іграх з друзями. Не треба паперу й ручки чи рахувати в голові — відкрийте сторінку на телефоні чи ноутбуці та ведіть рахунок разом.',
+      'Team Scoreboard — лічильник рахунку для командних ігор, що працює в браузері. Можна додати будь-яку кількість команд; у кожної є назва та рахунок, що редагуються. Бали нараховуються кнопками з налаштовуваним значенням (за замовчуванням +100 / −100); значення кнопок можна змінювати, видаляти або додавати нові, а самі кнопки можуть бути спільними для всіх команд або окремими для кожної. Дані зберігаються локально в браузері (localStorage), реєстрація не потрібна.',
     useCases: [
-      'Настільні та карткові ігри великою компанією',
-      'Вікторини й квізи (pub quiz, "Своя гра")',
-      'Ігри на дні народження, у таборі чи на природі',
-      'Командний тімбілдинг в офісі',
-      'Змагання на уроках у школі чи в гуртку',
-      'Домашні спортивні ігри та естафети без табло',
-    ],
-    faqTitle: 'Питання і відповіді',
-    faq: [
-      {
-        q: 'Це безкоштовно?',
-        a: 'Так, повністю безкоштовно, без реклами і без реєстрації.',
-      },
-      {
-        q: 'Де зберігаються дані рахунку?',
-        a: 'Локально у вашому браузері (localStorage) — нічого не надсилається на сервер, тому дані бачите тільки ви.',
-      },
-      {
-        q: 'Скільки команд можна додати?',
-        a: 'Скільки завгодно — додавайте нову команду на кожну компанію гравців кнопкою «Додати команду».',
-      },
-      {
-        q: 'Чи можна налаштувати свої бали для кнопок?',
-        a: 'Так, значення кожної кнопки (наприклад +100 чи −50) можна змінити або видалити, а також додати власні кнопки.',
-      },
+      'Настільні та карткові ігри',
+      'Вікторини й квізи',
+      'Дні народження, табір, ігри на природі',
+      'Тімбілдинг в офісі',
+      'Заняття у школі чи гуртку',
+      'Спортивні ігри та естафети без табло',
     ],
   },
   en: {
@@ -72,35 +53,16 @@ const messages = {
     confirmNewGame: 'Reset everything and start over with default settings?',
     defaultTeamName: (n) => `Team ${n}`,
     teamFallbackName: 'Team',
-    aboutTitle: 'What this scoreboard is for',
+    aboutTitle: 'About',
     aboutIntro:
-      "Team Scoreboard is a simple tool for keeping score in team games with friends. No paper, pen, or mental math needed — open the page on a phone or laptop and track the score together.",
+      'Team Scoreboard is a browser-based score counter for team games. Any number of teams can be added, each with an editable name and score. Points are adjusted with configurable buttons (default +100 / −100); button values can be changed, removed, or added, and buttons can be shared across all teams or set independently per team. Data is stored locally in the browser (localStorage); no account is required.',
     useCases: [
-      'Board and card games with a group of friends',
-      'Pub quizzes and trivia nights',
-      'Birthday parties, summer camp, or outdoor games',
-      'Team-building activities at the office',
-      'Classroom competitions and school clubs',
-      'Backyard sports and relay races without a scoreboard',
-    ],
-    faqTitle: 'Frequently asked questions',
-    faq: [
-      {
-        q: 'Is it free?',
-        a: 'Yes, completely free, with no ads and no sign-up.',
-      },
-      {
-        q: 'Where is the score data stored?',
-        a: 'Locally in your browser (localStorage) — nothing is sent to a server, so only you can see it.',
-      },
-      {
-        q: 'How many teams can I add?',
-        a: 'As many as you need — add a new team for every group of players with the "Add team" button.',
-      },
-      {
-        q: 'Can I customize the point buttons?',
-        a: 'Yes, every button\'s value (e.g. +100 or −50) can be changed or removed, and you can add your own buttons.',
-      },
+      'Board and card games',
+      'Quizzes and trivia',
+      'Birthdays, camp, outdoor games',
+      'Office team building',
+      'Classroom activities',
+      'Sports and relay races without a scoreboard',
     ],
   },
   ru: {
@@ -122,35 +84,16 @@ const messages = {
     confirmNewGame: 'Сбросить всё и начать заново с настройками по умолчанию?',
     defaultTeamName: (n) => `Команда ${n}`,
     teamFallbackName: 'Команда',
-    aboutTitle: 'Для чего нужен этот счётчик',
+    aboutTitle: 'О приложении',
     aboutIntro:
-      'Team Scoreboard — простой инструмент для ведения счёта в командных играх с друзьями. Не нужна бумага и ручка или счёт в уме — откройте страницу на телефоне или ноутбуке и ведите счёт вместе.',
+      'Team Scoreboard — счётчик очков для командных игр, работающий в браузере. Можно добавить любое количество команд; у каждой — редактируемые название и счёт. Баллы начисляются кнопками с настраиваемым значением (по умолчанию +100 / −100); значения кнопок можно менять, удалять или добавлять новые, а сами кнопки могут быть общими для всех команд или отдельными для каждой. Данные хранятся локально в браузере (localStorage), регистрация не требуется.',
     useCases: [
-      'Настольные и карточные игры большой компанией',
-      'Викторины и квизы (pub quiz, «Своя игра»)',
-      'Дни рождения, летний лагерь, игры на природе',
-      'Командный тимбилдинг в офисе',
-      'Соревнования на уроках в школе или в кружке',
-      'Домашние спортивные игры и эстафеты без табло',
-    ],
-    faqTitle: 'Вопросы и ответы',
-    faq: [
-      {
-        q: 'Это бесплатно?',
-        a: 'Да, полностью бесплатно, без рекламы и без регистрации.',
-      },
-      {
-        q: 'Где хранятся данные счёта?',
-        a: 'Локально в вашем браузере (localStorage) — ничего не отправляется на сервер, поэтому данные видите только вы.',
-      },
-      {
-        q: 'Сколько команд можно добавить?',
-        a: 'Сколько угодно — добавляйте новую команду на каждую компанию игроков кнопкой «Добавить команду».',
-      },
-      {
-        q: 'Можно ли настроить свои баллы для кнопок?',
-        a: 'Да, значение каждой кнопки (например +100 или −50) можно изменить или удалить, а также добавить свои кнопки.',
-      },
+      'Настольные и карточные игры',
+      'Викторины и квизы',
+      'Дни рождения, лагерь, игры на природе',
+      'Тимбилдинг в офисе',
+      'Занятия в школе или кружке',
+      'Спортивные игры и эстафеты без табло',
     ],
   },
   es: {
@@ -172,35 +115,16 @@ const messages = {
     confirmNewGame: '¿Reiniciar todo y empezar de nuevo con la configuración predeterminada?',
     defaultTeamName: (n) => `Equipo ${n}`,
     teamFallbackName: 'Equipo',
-    aboutTitle: 'Para qué sirve este marcador',
+    aboutTitle: 'Acerca de',
     aboutIntro:
-      'Team Scoreboard es una herramienta sencilla para llevar la puntuación en juegos en equipo con amigos. Sin papel, boli ni cálculo mental: abre la página en el móvil o portátil y llevad la cuenta juntos.',
+      'Team Scoreboard es un contador de puntuación para juegos en equipo que funciona en el navegador. Se puede añadir cualquier número de equipos, cada uno con nombre y puntuación editables. Los puntos se ajustan con botones configurables (+100 / −100 por defecto); el valor de los botones se puede modificar, eliminar o añadir, y los botones pueden compartirse entre todos los equipos o configurarse de forma independiente para cada uno. Los datos se guardan localmente en el navegador (localStorage); no se requiere cuenta.',
     useCases: [
-      'Juegos de mesa y de cartas con un grupo de amigos',
-      'Trivias y noches de preguntas (pub quiz)',
-      'Cumpleaños, campamentos de verano o juegos al aire libre',
-      'Actividades de team building en la oficina',
-      'Competiciones en clase o en actividades extraescolares',
-      'Deportes y relevos caseros sin marcador',
-    ],
-    faqTitle: 'Preguntas frecuentes',
-    faq: [
-      {
-        q: '¿Es gratis?',
-        a: 'Sí, totalmente gratis, sin anuncios y sin registro.',
-      },
-      {
-        q: '¿Dónde se guardan los datos?',
-        a: 'Localmente en tu navegador (localStorage): no se envía nada a ningún servidor, así que solo tú puedes verlos.',
-      },
-      {
-        q: '¿Cuántos equipos puedo añadir?',
-        a: 'Los que necesites: añade un equipo nuevo por cada grupo de jugadores con el botón «Añadir equipo».',
-      },
-      {
-        q: '¿Puedo personalizar los botones de puntos?',
-        a: 'Sí, puedes cambiar o eliminar el valor de cualquier botón (por ejemplo +100 o −50) y añadir tus propios botones.',
-      },
+      'Juegos de mesa y de cartas',
+      'Trivias y quizzes',
+      'Cumpleaños, campamentos, juegos al aire libre',
+      'Team building en la oficina',
+      'Actividades escolares',
+      'Deportes y relevos sin marcador',
     ],
   },
   fr: {
@@ -222,35 +146,16 @@ const messages = {
     confirmNewGame: 'Tout réinitialiser et recommencer avec les réglages par défaut ?',
     defaultTeamName: (n) => `Équipe ${n}`,
     teamFallbackName: 'Équipe',
-    aboutTitle: 'À quoi sert ce compteur',
+    aboutTitle: 'À propos',
     aboutIntro:
-      "Team Scoreboard est un outil simple pour tenir le score dans les jeux en équipe entre amis. Plus besoin de papier, de stylo ou de calcul mental : ouvrez la page sur votre téléphone ou ordinateur et comptez ensemble.",
+      "Team Scoreboard est un compteur de score pour les jeux en équipe, fonctionnant dans le navigateur. Un nombre illimité d'équipes peut être ajouté, chacune avec un nom et un score modifiables. Les points sont ajustés à l'aide de boutons configurables (+100 / −100 par défaut) ; la valeur des boutons peut être modifiée, supprimée ou ajoutée, et les boutons peuvent être partagés entre toutes les équipes ou définis indépendamment pour chacune. Les données sont stockées localement dans le navigateur (localStorage) ; aucun compte n'est requis.",
     useCases: [
-      'Jeux de société et de cartes entre amis',
-      'Quiz et soirées trivia (pub quiz)',
-      'Anniversaires, colonies de vacances, jeux en plein air',
-      'Activités de team building au bureau',
-      'Compétitions en classe ou en club scolaire',
-      'Sports et relais improvisés sans tableau de score',
-    ],
-    faqTitle: 'Questions fréquentes',
-    faq: [
-      {
-        q: 'Est-ce gratuit ?',
-        a: 'Oui, entièrement gratuit, sans publicité et sans inscription.',
-      },
-      {
-        q: 'Où sont stockées les données ?',
-        a: "Localement dans votre navigateur (localStorage) — rien n'est envoyé à un serveur, vous seul pouvez les voir.",
-      },
-      {
-        q: "Combien d'équipes puis-je ajouter ?",
-        a: 'Autant que nécessaire — ajoutez une équipe pour chaque groupe de joueurs avec le bouton « Ajouter une équipe ».',
-      },
-      {
-        q: 'Puis-je personnaliser les boutons de points ?',
-        a: "Oui, la valeur de chaque bouton (par ex. +100 ou −50) peut être modifiée ou supprimée, et vous pouvez ajouter vos propres boutons.",
-      },
+      'Jeux de société et de cartes',
+      'Quiz et trivia',
+      'Anniversaires, colonies, jeux en plein air',
+      'Team building au bureau',
+      'Activités scolaires',
+      'Sports et relais sans tableau de score',
     ],
   },
   de: {
@@ -272,35 +177,16 @@ const messages = {
     confirmNewGame: 'Alles zurücksetzen und mit den Standardeinstellungen neu beginnen?',
     defaultTeamName: (n) => `Team ${n}`,
     teamFallbackName: 'Team',
-    aboutTitle: 'Wofür dieser Punktezähler gedacht ist',
+    aboutTitle: 'Über die App',
     aboutIntro:
-      'Team Scoreboard ist ein einfaches Werkzeug, um bei Teamspielen mit Freunden Punkte zu zählen. Kein Papier, kein Stift, kein Kopfrechnen nötig — öffnet die Seite auf dem Handy oder Laptop und zählt gemeinsam mit.',
+      'Team Scoreboard ist ein browserbasierter Punktezähler für Teamspiele. Es können beliebig viele Teams hinzugefügt werden, jedes mit editierbarem Namen und Punktestand. Punkte werden über konfigurierbare Buttons vergeben (Standard +100 / −100); die Werte der Buttons können geändert, gelöscht oder neu hinzugefügt werden, und die Buttons können für alle Teams gemeinsam oder pro Team unabhängig eingestellt werden. Die Daten werden lokal im Browser gespeichert (localStorage); es ist kein Konto erforderlich.',
     useCases: [
-      'Brett- und Kartenspiele mit einer Gruppe von Freunden',
-      'Pub-Quiz und Trivia-Abende',
-      'Geburtstagsfeiern, Ferienlager oder Spiele im Freien',
-      'Team-Building-Aktivitäten im Büro',
-      'Wettbewerbe im Unterricht oder in der Schul-AG',
-      'Sport und Staffelläufe im Garten ohne Anzeigetafel',
-    ],
-    faqTitle: 'Häufig gestellte Fragen',
-    faq: [
-      {
-        q: 'Ist es kostenlos?',
-        a: 'Ja, komplett kostenlos, ohne Werbung und ohne Registrierung.',
-      },
-      {
-        q: 'Wo werden die Daten gespeichert?',
-        a: 'Lokal in deinem Browser (localStorage) — es wird nichts an einen Server gesendet, nur du siehst die Daten.',
-      },
-      {
-        q: 'Wie viele Teams kann ich hinzufügen?',
-        a: 'So viele wie nötig — fügt für jede Spielergruppe mit dem Button „Team hinzufügen" ein neues Team hinzu.',
-      },
-      {
-        q: 'Kann ich die Punkte-Buttons anpassen?',
-        a: 'Ja, der Wert jedes Buttons (z. B. +100 oder −50) kann geändert oder gelöscht werden, und ihr könnt eigene Buttons hinzufügen.',
-      },
+      'Brett- und Kartenspiele',
+      'Quiz und Trivia',
+      'Geburtstage, Ferienlager, Spiele im Freien',
+      'Team-Building im Büro',
+      'Schulaktivitäten',
+      'Sport und Staffelläufe ohne Anzeigetafel',
     ],
   },
   zh: {
@@ -321,29 +207,10 @@ const messages = {
     confirmNewGame: '要重置所有内容并恢复默认设置吗？',
     defaultTeamName: (n) => `队伍 ${n}`,
     teamFallbackName: '队伍',
-    aboutTitle: '这个计分器是做什么用的',
+    aboutTitle: '关于',
     aboutIntro:
-      'Team Scoreboard 是一个简单的工具，用于和朋友一起在团队游戏中记分。无需纸笔或心算——在手机或电脑上打开页面，一起记分。',
-    useCases: ['和一群朋友玩桌游或纸牌游戏', '酒吧问答之夜和知识竞赛', '生日聚会、夏令营或户外游戏', '办公室团队建设活动', '课堂或社团比赛', '没有计分板的家庭体育比赛和接力赛'],
-    faqTitle: '常见问题',
-    faq: [
-      {
-        q: '这是免费的吗？',
-        a: '是的，完全免费，没有广告，无需注册。',
-      },
-      {
-        q: '分数数据保存在哪里？',
-        a: '保存在您浏览器的本地存储（localStorage）中——不会发送到任何服务器，只有您能看到。',
-      },
-      {
-        q: '我可以添加多少支队伍？',
-        a: '可以按需添加——为每一组玩家用「添加队伍」按钮新增一支队伍。',
-      },
-      {
-        q: '可以自定义加减分按钮吗？',
-        a: '可以，每个按钮的数值（例如 +100 或 −50）都可以修改或删除，也可以添加自己的按钮。',
-      },
-    ],
+      'Team Scoreboard 是一款基于浏览器的团队游戏计分工具。可以添加任意数量的队伍，每支队伍都有可编辑的名称和分数。分数通过可配置的按钮调整（默认 +100 / −100）；按钮的数值可以修改、删除或新增，按钮可以在所有队伍间共享，也可以为每支队伍单独设置。数据保存在浏览器本地（localStorage），无需注册账号。',
+    useCases: ['桌游和纸牌游戏', '问答和知识竞赛', '生日聚会、夏令营、户外游戏', '办公室团队建设', '课堂活动', '没有计分板的体育比赛和接力赛'],
   },
 }
 

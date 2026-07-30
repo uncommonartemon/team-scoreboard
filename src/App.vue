@@ -215,13 +215,5 @@ function onCardLeave(el, done) {
         <li v-for="useCase in t('useCases')" :key="useCase">{{ useCase }}</li>
       </ul>
     </section>
-
-    <section class="faq">
-      <h2>{{ t('faqTitle') }}</h2>
-      <div v-for="item in t('faq')" :key="item.q" class="faq__item">
-        <h3>{{ item.q }}</h3>
-        <p>{{ item.a }}</p>
-      </div>
-    </section>
   </div>
 </template>
